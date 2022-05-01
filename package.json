@@ -1,0 +1,57 @@
+{
+  "name": "Food",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "adb reverse tcp:8081 tcp:8081 && cd ./android  && ./gradlew app:assembleDebug && ./gradlew installDebug && cd ..",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/slider": "^4.1.12",
+    "@react-navigation/bottom-tabs": "^6.0.9",
+    "@react-navigation/drawer": "^6.1.8",
+    "@react-navigation/material-bottom-tabs": "^6.0.9",
+    "@react-navigation/material-top-tabs": "^6.0.6",
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/native-stack": "^6.2.5",
+    "axios": "^0.24.0",
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-confetti": "^6.0.1",
+    "react-native": "0.66.3",
+    "react-native-animated-ellipsis": "^2.0.0",
+    "react-native-confetti-cannon": "^1.5.2",
+    "react-native-countdown-component": "^2.7.1",
+    "react-native-fireworks": "^0.2.6",
+    "react-native-gesture-handler": "^2.1.0",
+    "react-native-maps": "0.29.4",
+    "react-native-modal": "^13.0.0",
+    "react-native-orientation-loading-overlay": "^0.1.6",
+    "react-native-pager-view": "^5.4.9",
+    "react-native-paper": "^4.10.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.9.0",
+    "react-native-swiper": "^1.6.0",
+    "react-native-tab-view": "^3.1.1",
+    "react-native-vector-icons": "^9.0.0",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "update": "^0.7.4"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.0",
+    "@babel/runtime": "7.16.3",
+    "@react-native-community/eslint-config": "2.0.0",
+    "babel-jest": "26.6.3",
+    "eslint": "7.14.0",
+    "jest": "26.6.3",
+    "metro-react-native-babel-preset": "0.66.2",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
