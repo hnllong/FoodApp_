@@ -9,7 +9,7 @@ const Login = ({route, navigation }) => {
     const [isSecureTextEntry, setSecureTextEntry] = useState(true);
     const [done, setdone] = useState('');
     const handleLogin = () => {
-        if (tk === "0934536780" && mk === "admin-2001") {
+        if (tk === "123" && mk === "admin") {
             Alert.alert(
             "HLONG_food",
             "Đăng Nhập Thành Công!",);

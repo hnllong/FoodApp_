@@ -6,6 +6,8 @@ import Maps from '../../Maps';
 import Login from '../../myScreen/Login';
 import Camnang from '../../Camnang';
 import Chitietcamnang1 from '../../Chitietcamnang1';
+import HighlandsCoffee from '../../HighlandsCoffee';
+import QRcode from '../../QRcode';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,10 +16,12 @@ function StackHome() {
         <Stack.Navigator  screenOptions={{
             headerShown: false
           }}>
-          <Stack.Screen name="Home" component={HomeFood} />
-          <Stack.Screen name="Detalis" component={Details} />
+          {/* <Stack.Screen name="Home" component={HomeFood} /> */}
+          <Stack.Screen name="Coffee" component={HighlandsCoffee} />
+          <Stack.Screen name="QRcode" component={QRcode} />
+          {/* <Stack.Screen name="Detalis" component={Details} />
           <Stack.Screen name="Maps" component={Maps} />
-          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Login" component={Login} /> */}
 
         </Stack.Navigator>
     );

@@ -8,50 +8,62 @@ import tabTwo from '../Stack/ChatStack';
 import tab4 from '../Stack/CartStack';
 import tab5 from '../Stack/ProfileStack';
 import Countdown from '../Stack/VoucherStack';
+import HighlandsCoffee from '../../HighlandsCoffee';
+import { NavigationContainer } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
 export default function TabHome() {
     return (
+        <NavigationContainer >
+        {/* <Stack.Navigator screenOptions={{
+          headerShown: false
+        }}> */}
         <Tab.Navigator
-            activeColor="red"
-            inactiveColor="#3e2465"
-            barStyle={{ backgroundColor: 'red' }}
+       
+           
+            // barStyle={{ backgroundColor: 'red' }}
             screenOptions={{
                 headerShown: false
             }}
         >
             <Tab.Screen name="HomeTab" component={StackHome} options={{
-                tabBarLabel: '',
-                tabBarColor: 'red',
+                 
+                tabBarLabel: 'Trang chủ',
+                tabBarActiveTintColor: 'red',
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name="home" color={color} size={35} />
                 ),
             }} /> 
             <Tab.Screen name="VoucherTab" component={Countdown} options={{
-                tabBarLabel: '',
+               tabBarActiveTintColor: 'red',
+                tabBarLabel: 'Đơn hàng',
                 tabBarColor: 'red',
                 tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="trophy" color={color} size={35} />
+                    <MaterialCommunityIcons name="clipboard" color={color} size={35} />
                 ),
             }} />
             <Tab.Screen name="ChatTab" component={tabTwo} options={{
-                tabBarLabel: '',
-                tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="comment" color={color} size={35} />
-                ),
-            }} />
-            <Tab.Screen name="carttab" component={tab4} options={{
-                tabBarLabel: '',
+                tabBarActiveTintColor: 'red',
+                tabBarLabel: 'Đặt hàng',
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name="cart-plus" color={color} size={35} />
                 ),
             }} />
+            <Tab.Screen name="carttab" component={tab4} options={{
+                tabBarLabel: 'Trả trước',
+                tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons name="wallet" color={color} size={35} />
+                ),
+            }} />
             <Tab.Screen name="profiletab" component={tab5} options={{
-                tabBarLabel: '',
+                tabBarActiveTintColor: 'red',
+                tabBarLabel: 'Tài Khoản',
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name="account" color={color} size={35} />
                 ),
             }} />
+             
         </Tab.Navigator>
+        </NavigationContainer>
     );
 }
